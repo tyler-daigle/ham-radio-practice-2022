@@ -1,42 +1,25 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --primary-text-color: #a5afc9;
+  --main-bg-color: #0f1117;
+  --header-color: white;
+  --exam-header-color: #9acb32;
+  --button-bg-color: #403173;
+  --button-fg-color: var(--primary-text-color);
+  --question-container-bg: #131b29;
+  --question-container-border: #1d2637;
+  --bright-green: #4be574;
+  --bright-pink: #f363ba;
+  --light-blue: #517090;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-button {
-  font-size: calc(10px + 2vmin);
+body {
+  font-family: "Roboto Mono", monospace;
+  background-color: var(--main-bg-color);
+  color: var(--primary-text-color);
+  font-size: 16px;
 }

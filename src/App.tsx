@@ -1,45 +1,60 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import "./App.css";
+import MainContainer from "./components/UI/MainContainer";
+import ExamHeader from "./components/UI/ExamHeader";
+import SmallText from "./components/UI/SmallText";
+import QuestionList from "./components/QuestionList";
+
+const data = [
+  {
+    id: "T1A01",
+    correct: 2,
+    question:
+      "Which of the following is a purpose of the Amateur Radio Service as stated in the FCC rules and regulations?",
+    answers: [
+      "Providing personal radio communications for as many citizens as possible",
+      "Providing communications for international non-profit organizations",
+      "Advancing skills in the technical and communication phases of the radio art",
+      "All of these choices are correct",
+    ],
+  },
+  {
+    id: "T1A04",
+    correct: 0,
+    question:
+      "How many operator/primary station license grants may be held by any one person?",
+    answers: [
+      "One",
+      "No more than two",
+      "One for each band on which the person plans to operate",
+      "One for each permanent station location from which the person plans to operate",
+    ],
+  },
+  {
+    id: "T1B10",
+    correct: 3,
+    question:
+      "Which of the following HF bands have frequencies available to the Technician class operator for RTTY and data transmissions?",
+    answers: [
+      "10 meter, 12 meter, 17 meter, and 40 meter bands",
+      "10 meter, 15 meter, 40 meter, and 80 meter bands",
+      "30 meter band only",
+      "10 meter band only",
+    ],
+  },
+];
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
-    </div>
-  )
+    <MainContainer>
+      <main>
+        <ExamHeader>Technician Practice Exam AB1234</ExamHeader>
+        <SmallText>
+          You must achieve a score of at least 76% in order to pass.
+        </SmallText>
+        <QuestionList questions={data} />
+      </main>
+    </MainContainer>
+  );
 }
 
-export default App
+export default App;
