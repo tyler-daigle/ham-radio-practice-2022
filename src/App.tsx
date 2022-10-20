@@ -3,6 +3,7 @@ import MainContainer from "./components/UI/MainContainer";
 import ExamHeader from "./components/UI/ExamHeader";
 import SmallText from "./components/UI/SmallText";
 import QuestionList from "./components/QuestionList";
+import Button from "./components/UI/Button";
 
 const data = [
   {
@@ -52,6 +53,7 @@ function App() {
           You must achieve a score of at least 76% in order to pass.
         </SmallText>
         <QuestionList questions={data} />
+        <Button>Technician</Button>
       </main>
     </MainContainer>
   );
