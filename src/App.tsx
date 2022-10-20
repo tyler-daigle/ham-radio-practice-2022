@@ -5,7 +5,9 @@ import SmallText from "./components/UI/SmallText";
 import QuestionList from "./components/QuestionList";
 import Button from "./components/UI/Button";
 
-const data = [
+import { Question } from "./temp/types";
+
+const data: Question[] = [
   {
     id: "T1A01",
     correct: 2,

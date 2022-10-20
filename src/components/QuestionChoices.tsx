@@ -10,18 +10,20 @@ import { useState } from "react";
 // TODO: This is where some global state of what questions have been answered and their
 // values would be set.
 
-export default function QuestionChoices({ choices }) {
-  const [selectedAnswer, setSelectedAnswer] = useState(null);
+export default function QuestionChoices({ choices, questionId }: { choices: string[], questionId: string }) {
+  const [selectedAnswer, setSelectedAnswer]: [number | undefined, any] = useState(undefined);
+
   return (
     <ol className={styles.questionChoiceList}>
       {choices.map((choice, index) => (
         <li className={styles.choiceItem}>
           <input
+            id={`${questionId}-${index}`}
             type="checkbox"
             checked={selectedAnswer === index}
             onChange={() => setSelectedAnswer(index)}
           />
-          {choice}
+          <label htmlFor={`${questionId}-${index}`}>{choice}</label>
         </li>
       ))}
     </ol>
