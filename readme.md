@@ -39,3 +39,10 @@ must follow the format below:
   ]
 }
 ```
+
+## Tech Stack
+
+This project was created with **React** using **Vite**.
+
+Currently while in development **json-server** is being used to
+provide the question data.
